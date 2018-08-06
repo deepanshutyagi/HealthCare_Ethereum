@@ -41,15 +41,13 @@ contract  PriceDirectoryInterface{
     
     function checkIfProviderExists(address _provider) external view returns(bool);
     
-    //checkALl the providers on the platform
     
-    function viewAllProviders() external view returns(address[]);
     
      //Events
     
     event appliedForWhitelisting(address indexed _provider);
     event whiteListed(address indexed _provider);
-    event procedureListedSuccess(address indexed _provider,uint indexed _procedureId);
+    event procedureListedSuccess(address indexed _provider,uint indexed _procedureId,uint indexed _priceInTokens);
     event procedureApproved (address indexed _provider,uint indexed _procedureId);
     event procedurePriceChanged(address indexed _provider,uint indexed _procedureId,uint indexed _priceChangedTo);
     
@@ -142,7 +140,7 @@ contract PriceDirectory is PriceDirectoryInterface{
                 require(procedureListed[_provider][_procedureId]==false);
                 require(procedureExists[_provider][_procedureId]==false);
                 procedureExists[_provider][_procedureId]=true;
-                procedureApproved(_provider,_procedureId);
+                emit procedureApproved(_provider,_procedureId);
                 return true;
     }
     
@@ -160,6 +158,7 @@ contract PriceDirectory is PriceDirectoryInterface{
                         providerData[msg.sender].procedureCurrentPrice[_procedureId]=_priceInTokens;
                         providerData[msg.sender].procedurePriceAtBlock[_procedureId][block.number]=_priceInTokens;
                         procedureListed[msg.sender][_procedureId]=true;
+                        emit procedureListedSuccess(msg.sender,_procedureId,_priceInTokens);
                         return true;
                         
 
@@ -213,12 +212,6 @@ contract PriceDirectory is PriceDirectoryInterface{
                      return true;
         
     } 
-    
-    //checkALl the providers on the platform
-    
-    function viewAllProviders() external view returns(address[]){
-                return providers;
-    }
     
     
     
