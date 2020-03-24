@@ -110,7 +110,7 @@ pluggy==0.6.0
 plyvel==1.0.4
 prompt-toolkit==1.0.15
 protobuf==3.0.0a3
-psutil==5.4.3
+psutil==5.6.6
 ptyprocess==0.5.2
 py==1.5.3
 py-ecc==1.4.2
