@@ -132,7 +132,7 @@ pytest==3.5.1
 python-dateutil==2.7.2
 pytz==2018.3
 pywallet==0.0.7
-PyYAML==3.12
+PyYAML==5.1
 pyzmq==17.0.0
 qtconsole==4.3.1
 repoze.lru==0.7
