@@ -121,7 +121,7 @@ pycparser==2.18
 pycryptodome==3.6.1
 pyethash==0.1.27
 pyflakes==1.6.0
-Pygments==2.2.0
+Pygments==2.7.4
 pylru==1.0.9
 pymitter==0.2.3
 Pympler==0.5
