@@ -1,7 +1,7 @@
 aenum==2.1.0
 aniso8601==3.0.0
 appnope==0.1.0
-arrow==0.12.1
+arrow==0.15.1
 asn1crypto==0.24.0
 astor==0.6.2
 attrdict==2.0.0
