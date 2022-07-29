@@ -83,7 +83,7 @@ lru-dict==1.1.6
 MarkupSafe==1.0
 mccabe==0.6.1
 memory-profiler==0.52.0
-mistune==0.8.3
+mistune==2.0.3
 mmh3==2.5.1
 mnemonic==0.13
 mock==2.0.0
