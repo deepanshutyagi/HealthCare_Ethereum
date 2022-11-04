@@ -151,7 +151,7 @@ toolz==0.9.0
 tornado==5.0.2
 tqdm==4.20.0
 traitlets==4.3.2
-Twisted==17.9.0
+Twisted==22.10.0
 two1==3.10.9
 typing==3.6.4
 urllib3==1.22
